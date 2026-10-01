@@ -16,6 +16,7 @@ authors:
     affiliation: "BionamiX, Ghent University"
   - family-names: Daly
     given-names: Aisling J.
+    orcid: "https://orcid.org/0000-0002-3390-2495"
     affiliation: "BionamiX, Ghent University"
   - family-names: Baetens
     given-names: Jan M.
@@ -42,6 +43,7 @@ preferred-citation:
       orcid: "https://orcid.org/0000-0001-8467-734X"
     - family-names: Daly
       given-names: Aisling J.
+      orcid: "https://orcid.org/0000-0002-3390-2495"
     - family-names: Baetens
       given-names: Jan M.
       orcid: "https://orcid.org/0000-0003-4084-9992"
