@@ -1,0 +1,23 @@
+# The default CNN (after Silverman 2019) trained to identify the rule.
+# Chapter Sec. 2.2-2.3: 6016 parameters; 99.86% training / 99.85% validation
+# accuracy. The notebook printed 0.998530 / 0.998520, i.e. 99.85% / 99.85%
+# (docs/provenance.md §2, §7.9).
+inherits: base.yaml
+description: Default CNN, rule identification (256 outputs)
+source_notebook: notebooks/archive/reproducing-silverman2019_default.ipynb (cells 7, 11-13, 16)
+chapter_reference: Sec. 2.2 "The default CNN", Sec. 2.3; Fig. default_model-misidentified_val_set
+
+model:
+  architecture: default
+  output: rules
+  kernel: [2, 3]           # Keras (rows, columns) = (time, space): the chapter's "3 x 2"
+
+split:
+  stratify_by: label       # the notebook stratifies on the loaded label file (here: the rule)
+
+train:
+  epochs: 50
+  learning_rate: 1.0e-3
+  early_stopping: {enabled: true, monitor: val_accuracy, patience: 5, min_delta: 1.0e-5,
+                   restore_best_weights: true}
+  evaluate_on: [train, val]

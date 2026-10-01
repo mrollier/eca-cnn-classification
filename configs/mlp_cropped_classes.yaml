@@ -1,0 +1,15 @@
+# The cropped fully-connected network of MLP-verification_cropped: the top-left
+# 28 x 28 corner of each diagram -> 1024 -> 512 -> 256 -> 5 (1,461,253
+# parameters). Its saved training log reaches 95.2-95.9% validation accuracy
+# before being interrupted at epoch 8, which matches the chapter's "just over
+# 95%". The chapter does not mention the crop. See docs/provenance.md §7.2.
+inherits: mlp_single_layer_classes.yaml
+description: MLP on a 28 x 28 crop, 784 -> 1024 -> 512 -> 256 -> 5 (1,461,253 parameters)
+source_notebook: notebooks/archive/MLP-verification_cropped.ipynb (cells 7-8, 11-13)
+
+train:
+  learning_rate: 1.0e-3         # MLP-verification_cropped cell 12
+
+model:
+  hidden_units: [1024, 512, 256]
+  crop: [28, 28]

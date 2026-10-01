@@ -1,0 +1,38 @@
+# Shared settings of every experiment. Each experiment file starts with
+#   inherits: base.yaml
+# and overrides what differs. Field meanings: src/eca_cnn/config.py.
+
+# corrected (default): the two bugs of docs/provenance.md §3 are fixed.
+# faithful: they are reproduced, to trace the published numbers.
+# Any experiment can be run in faithful mode with:  --set mode=faithful
+mode: corrected
+
+paths:
+  lookup_dir: data/lookup
+  data_dir: data/generated
+  output_dir: output
+  # Folder with the original Colab .npy files, for data.source: original
+  # (Drive: Colab Notebooks/Cellular Automata/Spacetime Diagram Classification/Files).
+  # Set the environment variable, or override with --set paths.original_data_dir=...
+  original_data_dir: ${ECA_CNN_ORIGINAL_DATA}
+
+data:
+  source: generated
+  width: 64
+  timesteps: 64              # rows including the random initial row
+  n_per_rule_trainval: 1024  # 262,144 diagrams
+  n_per_rule_test: 128       # 32,768 diagrams
+  seed_trainval: 20230001
+  seed_test: 20230002
+  simulator: numpy           # bit-identical to cellpylib, ~1000x faster
+
+split:
+  val_fraction: 0.25         # 196,608 training / 65,536 validation diagrams
+  shuffle_seed: 2023         # np.random.seed(2023) in every notebook
+  split_seed: 0              # train_test_split(random_state=0)
+  stratify_by: rule
+
+train:
+  batch_size: 64             # 3072 parameter updates per epoch
+  seed: 2023
+  deterministic_ops: true

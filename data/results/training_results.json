@@ -1,0 +1,33 @@
+{
+  "mode": "corrected",
+  "runs": {
+    "default_rules": null,
+    "default_classes": null,
+    "trimmed_classes": null,
+    "trimmed_rules": null,
+    "mlp_single_layer_classes": null,
+    "mlp_cropped_classes": null,
+    "final_classes": null,
+    "final_independent": null
+  },
+  "augmentation_table": {
+    "none/rules": null,
+    "none/independent": null,
+    "none/classes": null,
+    "invert/rules": null,
+    "invert/independent": null,
+    "invert/classes": null,
+    "mirror/rules": null,
+    "mirror/independent": null,
+    "mirror/classes": null,
+    "coarse_grain/rules": null,
+    "coarse_grain/independent": null,
+    "coarse_grain/classes": null,
+    "salt_and_pepper/rules": null,
+    "salt_and_pepper/independent": null,
+    "salt_and_pepper/classes": null,
+    "all/rules": null,
+    "all/independent": null,
+    "all/classes": null
+  }
+}

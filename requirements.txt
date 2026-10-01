@@ -1,0 +1,22 @@
+# Exact versions of the runtime and test dependencies.
+#
+# TensorFlow 2.15.0 is the version the original Colab notebooks report
+# (`print(tf.__version__)` -> 2.15.0). It is the last release in which
+# tf.keras is Keras 2, so the chapter's saved models (Keras 2 SavedModel
+# folders) load unchanged. It requires Python 3.9-3.11 and numpy < 2.
+tensorflow==2.15.0
+numpy==1.26.4
+
+# Reference ECA simulator, used by the original notebooks. The repository
+# simulates with a vectorised numpy routine that is tested to be bit-identical
+# to cellpylib for all 256 rules (verification/test_c2_simulation.py).
+cellpylib==2.4.0
+
+# Stratified train/validation split and confusion matrices, as in the notebooks.
+scikit-learn==1.5.2
+scipy==1.13.1
+
+matplotlib==3.9.2
+pyyaml==6.0.2
+
+pytest==8.3.3

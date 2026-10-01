@@ -1,0 +1,47 @@
+# The augmentation table of chapter Sec. 3.4 (Tab. assessment_data-augmentation):
+# the trimmed CNN trained with no augmentation, each single augmentation, and
+# all four together, for rules (256), equivalence classes (88) and Li-Packard
+# classes (5). 6 x 3 = 18 runs.
+#
+#   python scripts/train.py --config configs/augmentation_table.yaml            # all 18
+#   python scripts/train.py --config configs/augmentation_table.yaml --cell 4   # one
+#   python scripts/train.py --config configs/augmentation_table.yaml --list
+#
+# Settings of data-augmentation cell 17 (lr 1e-3, patience 5, min_delta 1e-5,
+# at most 100 epochs, split stratified on the label). The chapter reports "the
+# highest accuracies achieved", over runs with various learning rates and noise
+# levels that were not recorded. None of the 18 values is in a saved output
+# (docs/provenance.md §2). The coarse-grained and "all" rows depend on the
+# coarse-graining bug: compare with  --set mode=faithful  (§3.1).
+inherits: base.yaml
+description: Trimmed CNN with online augmentation (data-augmentation notebook settings)
+source_notebook: notebooks/archive/data-augmentation.ipynb (cells 7, 13, 16-18)
+chapter_reference: Sec. 3.3-3.4; Tab. assessment_data-augmentation
+
+model:
+  architecture: trimmed
+  kernel: [2, 2]
+
+augment:
+  salt_and_pepper_fraction: 0.01
+  coarse_grain_block: 2
+
+split:
+  stratify_by: label
+
+train:
+  epochs: 100
+  learning_rate: 1.0e-3
+  early_stopping: {enabled: true, monitor: val_accuracy, patience: 5, min_delta: 1.0e-5,
+                   restore_best_weights: true}
+  evaluate_on: [train, val]
+
+sweep:
+  augment.augmentations:
+    - []
+    - [invert]
+    - [mirror]
+    - [coarse_grain]
+    - [salt_and_pepper]
+    - [invert, mirror, coarse_grain, salt_and_pepper]
+  model.output: [rules, independent, classes]

@@ -1,0 +1,27 @@
+# The final model: trimmed CNN, Li-Packard classes, trained on all 262,144
+# training-and-validation diagrams with inversion, mirroring and coarse-graining
+# (no salt-and-pepper), 100 epochs without early stopping, evaluated on the
+# held-out test set. Chapter Sec. 3.4: 98.17% test accuracy (saved output
+# 0.981689) and the confusion matrix (Fig. confusion_matrix-final).
+#
+# The published model was trained with the coarse-graining bug (§3.1); its
+# faithful counterpart is  --set mode=faithful.
+inherits: base.yaml
+description: Final trimmed CNN, Li-Packard classes, invert + mirror + coarse-grain, all training data
+source_notebook: notebooks/archive/data-augmentation.ipynb (cells 23-24, 26)
+chapter_reference: Sec. 3.4; Fig. confusion_matrix-final
+
+model:
+  architecture: trimmed
+  output: classes
+  kernel: [2, 2]
+
+augment:
+  augmentations: [invert, mirror, coarse_grain]
+
+train:
+  train_on: trainval
+  epochs: 100
+  learning_rate: 5.0e-4
+  early_stopping: {enabled: false}
+  evaluate_on: [trainval, test]

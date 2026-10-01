@@ -1,0 +1,67 @@
+{
+  "n_parameters": 2360,
+  "data_source": "generated",
+  "chapter": {
+    "trainval": {
+      "n_misidentified": 331,
+      "accuracy": 0.9987
+    },
+    "notebook_comments": {
+      "trainval": {
+        "bit_0": 175,
+        "bit_2": 9,
+        "bit_5": 12,
+        "bit_7": 188,
+        "total": 384
+      }
+    }
+  },
+  "trainval": {
+    "n_diagrams": 262144,
+    "n_misidentified": 299,
+    "accuracy": 0.998859,
+    "equals_scan_with_missing_as_zero": true,
+    "errors_only_on_undetermined": true,
+    "n_undetermined": 601,
+    "n_undetermined_guessed_correctly": 302,
+    "n_undetermined_faithful_scan": 345,
+    "n_misidentified_among_faithful_undetermined": 163,
+    "misidentified_by_missing_bit": {
+      "bit_0": 144,
+      "bit_2": 6,
+      "bit_5": 9,
+      "bit_7": 140
+    },
+    "misidentified_with_several_wrong_bits": 0,
+    "misidentified_per_class": {
+      "null": 63,
+      "fixed point": 152,
+      "periodic": 75,
+      "locally chaotic": 1,
+      "chaotic": 8
+    }
+  },
+  "test": {
+    "n_diagrams": 32768,
+    "n_misidentified": 40,
+    "accuracy": 0.998779,
+    "equals_scan_with_missing_as_zero": true,
+    "errors_only_on_undetermined": true,
+    "n_undetermined": 83,
+    "n_undetermined_guessed_correctly": 43,
+    "n_undetermined_faithful_scan": 43,
+    "n_misidentified_among_faithful_undetermined": 20,
+    "misidentified_by_missing_bit": {
+      "bit_0": 19,
+      "bit_7": 20
+    },
+    "misidentified_with_several_wrong_bits": 1,
+    "misidentified_per_class": {
+      "null": 5,
+      "fixed point": 26,
+      "periodic": 7,
+      "locally chaotic": 0,
+      "chaotic": 2
+    }
+  }
+}

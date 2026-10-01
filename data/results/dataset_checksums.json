@@ -1,0 +1,23 @@
+{
+  "simulator_note": "numpy and cellpylib give identical diagrams",
+  "trainval": {
+    "n_diagrams": 262144,
+    "generator_version": 1,
+    "n_per_rule": 1024,
+    "seed": 20230001,
+    "source": "generated",
+    "timesteps": 64,
+    "width": 64,
+    "sha256": "f61059a79f513b9220dbe37142053bcafa74d92bc60be7b090472fb596760e6e"
+  },
+  "test": {
+    "n_diagrams": 32768,
+    "generator_version": 1,
+    "n_per_rule": 128,
+    "seed": 20230002,
+    "source": "generated",
+    "timesteps": 64,
+    "width": 64,
+    "sha256": "2577bd2e97da8142a616fbd3cdea5fa7a63b6235f73b7ccd248dc98f15bca504"
+  }
+}

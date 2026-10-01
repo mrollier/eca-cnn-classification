@@ -1,0 +1,27 @@
+# The trimmed CNN for Li-Packard classes, without augmentation.
+# Chapter Sec. 3.2: 389 parameters, 99.10% validation accuracy (the saved run
+# gives 98.90%; the notebook header records 99.10% from an earlier run).
+#
+# Hyperparameters of reproducing-silverman2019_trimmed cell 12 (lr 5e-4,
+# patience 10, min_delta 1e-6, at most 100 epochs). The augmentation table
+# (augmentation_table.yaml) uses the data-augmentation notebook's settings
+# instead, as the notebooks did.
+inherits: base.yaml
+description: Trimmed CNN, Li-Packard classes, no augmentation (_trimmed notebook settings)
+source_notebook: notebooks/archive/reproducing-silverman2019_trimmed.ipynb (cells 8, 11-13)
+chapter_reference: Sec. 3.2 "Trimming the default CNN"; Tab. assessment_data-augmentation, row "None"
+
+model:
+  architecture: trimmed
+  output: classes
+  kernel: [2, 2]
+
+split:
+  stratify_by: rule        # this notebook stratifies on the rule
+
+train:
+  epochs: 100
+  learning_rate: 5.0e-4
+  early_stopping: {enabled: true, monitor: val_accuracy, patience: 10, min_delta: 1.0e-6,
+                   restore_best_weights: true}
+  evaluate_on: [train, val]

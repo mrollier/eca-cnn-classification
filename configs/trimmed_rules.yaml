@@ -1,0 +1,8 @@
+# The trimmed CNN with a 256-node rule output.
+# Chapter Sec. 3.2: 1504 parameters, 71.19% validation accuracy (not found in
+# a saved output; the notebook header records 67.10% from another run).
+inherits: trimmed_classes.yaml
+description: Trimmed CNN, rule identification, no augmentation (_trimmed notebook settings)
+
+model:
+  output: rules

@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eca-cnn"
+version = "1.0.0"
+description = "Convolutional neural networks for automated classification of elementary cellular automata: reproducibility package"
+readme = "README.md"
+# TensorFlow 2.15 (the version the chapter's models were trained with, and the
+# last release whose tf.keras is Keras 2) supports Python 3.9 to 3.11.
+requires-python = ">=3.9,<3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "Michiel Rollier", email = "michiel.rollier@ugent.be" },
+    { name = "Aisling J. Daly" },
+    { name = "Jan M. Baetens" },
+]
+keywords = [
+    "cellular automata",
+    "elementary cellular automata",
+    "Li-Packard classification",
+    "convolutional neural networks",
+    "data augmentation",
+    "reproducibility",
+]
+dependencies = [
+    "tensorflow==2.15.0",
+    "numpy==1.26.4",
+    "cellpylib==2.4.0",
+    "scikit-learn==1.5.2",
+    "scipy==1.13.1",
+    "matplotlib==3.9.2",
+    "pyyaml==6.0.2",
+]
+
+[project.urls]
+Repository = "https://github.com/mrollier/eca-cnn-classification"
+Chapter = "https://doi.org/10.1007/978-3-031-81097-8_3"
+Preprint = "https://arxiv.org/abs/2409.02740"
+
+[project.optional-dependencies]
+test = ["pytest==8.3.3"]
+# Executing notebooks/reproduce_chapter.ipynb headlessly: pip install -e '.[notebook]'
+notebook = ["nbformat>=5.10", "nbclient>=0.10", "ipykernel>=6.25"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["verification"]
+addopts = "-q -p no:cacheprovider"
+markers = [
+    "slow: takes more than a few seconds (full-data or all-rule checks); deselect with -m 'not slow'",
+]
+filterwarnings = [
+    # TensorFlow 2.15 and its dependencies emit these on import; they are not ours.
+    "ignore::DeprecationWarning:tensorflow.*",
+    "ignore::DeprecationWarning:keras.*",
+    "ignore::DeprecationWarning:flatbuffers.*",
+    "ignore::DeprecationWarning:google.*",
+    "ignore::DeprecationWarning:h5py.*",
+]

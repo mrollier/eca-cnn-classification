@@ -1,0 +1,152 @@
+{
+  "mode": "faithful",
+  "data_source": "generated",
+  "chapter": {
+    "trainval": {
+      "n_undetermined": 370,
+      "n_class_ambiguous": 1
+    },
+    "test": {
+      "n_undetermined": 33,
+      "n_class_ambiguous": 0
+    },
+    "max_missing_neighbourhoods": 1
+  },
+  "trainval": {
+    "n_diagrams": 262144,
+    "n_undetermined": 345,
+    "fraction_undetermined": 0.001316,
+    "max_missing_neighbourhoods": 2,
+    "n_missing_histogram": {
+      "1": 344,
+      "2": 1
+    },
+    "undetermined_per_class": {
+      "null": 90,
+      "fixed point": 201,
+      "periodic": 48,
+      "locally chaotic": 0,
+      "chaotic": 6
+    },
+    "missing_neighbourhood_counts": {
+      "000": 154,
+      "001": 0,
+      "010": 18,
+      "011": 0,
+      "100": 0,
+      "101": 16,
+      "110": 0,
+      "111": 158
+    },
+    "n_class_ambiguous": 4,
+    "class_ambiguous": [
+      {
+        "index": 5031,
+        "rule": 4,
+        "class": "fixed point",
+        "missing": [
+          "010"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 0,
+            "class": "null"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 141617,
+        "rule": 138,
+        "class": "fixed point",
+        "missing": [
+          "010"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 142,
+            "class": "periodic"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 213752,
+        "rule": 208,
+        "class": "fixed point",
+        "missing": [
+          "010"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 212,
+            "class": "periodic"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 262140,
+        "rule": 255,
+        "class": "null",
+        "missing": [
+          "101"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 223,
+            "class": "fixed point"
+          }
+        ],
+        "probability_class_correct": 0.5
+      }
+    ]
+  },
+  "test": {
+    "n_diagrams": 32768,
+    "n_undetermined": 43,
+    "fraction_undetermined": 0.001312,
+    "max_missing_neighbourhoods": 3,
+    "n_missing_histogram": {
+      "1": 42,
+      "3": 1
+    },
+    "undetermined_per_class": {
+      "null": 11,
+      "fixed point": 28,
+      "periodic": 3,
+      "locally chaotic": 0,
+      "chaotic": 1
+    },
+    "missing_neighbourhood_counts": {
+      "000": 19,
+      "001": 0,
+      "010": 2,
+      "011": 1,
+      "100": 0,
+      "101": 2,
+      "110": 1,
+      "111": 20
+    },
+    "n_class_ambiguous": 1,
+    "class_ambiguous": [
+      {
+        "index": 29818,
+        "rule": 232,
+        "class": "fixed point",
+        "missing": [
+          "011",
+          "110",
+          "111"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 32,
+            "class": "null"
+          }
+        ],
+        "probability_class_correct": 0.5
+      }
+    ]
+  }
+}

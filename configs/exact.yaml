@@ -1,0 +1,11 @@
+# The exact CNN: hand-set weights, no training (scripts/run_exact_cnn.py).
+# Chapter Sec. 3.1: 2360 parameters; 331 of 262,144 diagrams misidentified
+# (not found in a saved output; the notebook's comments give 384).
+inherits: base.yaml
+description: Exact CNN with hand-set weights, rule identification
+source_notebook: notebooks/archive/custom-made-cnn.ipynb (cells 8-15)
+chapter_reference: Sec. 3.1 "An exact CNN for rule identification"
+
+model:
+  architecture: exact
+  output: rules

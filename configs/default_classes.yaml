@@ -1,0 +1,13 @@
+# The default CNN trained to identify the Li-Packard class.
+# Chapter Sec. 2.3: 7301 parameters; 99.99% training and validation accuracy
+# after 12 epochs, 6 of 65,536 validation diagrams wrong (docs/provenance.md
+# §2: "Likely"; the accuracy itself is not in a saved output).
+inherits: default_rules.yaml
+description: Default CNN, Li-Packard class identification (5 outputs)
+chapter_reference: Sec. 2.2-2.3; Fig. default_model-all_wrong_LP_classes
+
+model:
+  output: classes
+
+split:
+  stratify_by: label       # i.e. on the Li-Packard class, as in the notebook (OUTPUT_TYPE = classes)

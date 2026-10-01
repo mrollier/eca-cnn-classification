@@ -1,0 +1,8 @@
+# The final model with an 88-node output (equivalence classes of rules).
+# Chapter Sec. 3.4: 61.25% test accuracy (predictions made in data-augmentation
+# cell 26; the value itself is not printed, docs/provenance.md §2).
+inherits: final_classes.yaml
+description: Final trimmed CNN, 88 equivalence classes, invert + mirror + coarse-grain, all training data
+
+model:
+  output: independent

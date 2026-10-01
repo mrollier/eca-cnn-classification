@@ -1,0 +1,21 @@
+{
+  "counts": {
+    "default_rules": 6016,
+    "default_classes": 7301,
+    "exact_rules": 2360,
+    "trimmed_classes": 389,
+    "trimmed_rules": 1504,
+    "trimmed_independent": 664,
+    "mlp_single_layer_classes": 1050117,
+    "mlp_single_layer_rules": 1114624,
+    "mlp_cropped_classes": 1461253
+  },
+  "chapter": {
+    "default_rules": 6016,
+    "default_classes": 7301,
+    "exact_rules": 2360,
+    "trimmed_classes": 389,
+    "trimmed_rules": 1504,
+    "trimmed_independent": 664
+  }
+}

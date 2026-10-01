@@ -1,0 +1,202 @@
+{
+  "mode": "corrected",
+  "data_source": "generated",
+  "chapter": {
+    "trainval": {
+      "n_undetermined": 370,
+      "n_class_ambiguous": 1
+    },
+    "test": {
+      "n_undetermined": 33,
+      "n_class_ambiguous": 0
+    },
+    "max_missing_neighbourhoods": 1
+  },
+  "trainval": {
+    "n_diagrams": 262144,
+    "n_undetermined": 601,
+    "fraction_undetermined": 0.002293,
+    "max_missing_neighbourhoods": 2,
+    "n_missing_histogram": {
+      "1": 600,
+      "2": 1
+    },
+    "undetermined_per_class": {
+      "null": 109,
+      "fixed point": 326,
+      "periodic": 147,
+      "locally chaotic": 3,
+      "chaotic": 16
+    },
+    "missing_neighbourhood_counts": {
+      "000": 293,
+      "001": 0,
+      "010": 13,
+      "011": 0,
+      "100": 0,
+      "101": 13,
+      "110": 0,
+      "111": 283
+    },
+    "n_class_ambiguous": 5,
+    "class_ambiguous": [
+      {
+        "index": 5031,
+        "rule": 4,
+        "class": "fixed point",
+        "missing": [
+          "010"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 0,
+            "class": "null"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 117142,
+        "rule": 114,
+        "class": "fixed point",
+        "missing": [
+          "000"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 115,
+            "class": "periodic"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 141617,
+        "rule": 138,
+        "class": "fixed point",
+        "missing": [
+          "010"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 142,
+            "class": "periodic"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 213752,
+        "rule": 208,
+        "class": "fixed point",
+        "missing": [
+          "010"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 212,
+            "class": "periodic"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 262140,
+        "rule": 255,
+        "class": "null",
+        "missing": [
+          "101"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 223,
+            "class": "fixed point"
+          }
+        ],
+        "probability_class_correct": 0.5
+      }
+    ]
+  },
+  "test": {
+    "n_diagrams": 32768,
+    "n_undetermined": 83,
+    "fraction_undetermined": 0.002533,
+    "max_missing_neighbourhoods": 3,
+    "n_missing_histogram": {
+      "1": 82,
+      "3": 1
+    },
+    "undetermined_per_class": {
+      "null": 13,
+      "fixed point": 46,
+      "periodic": 21,
+      "locally chaotic": 0,
+      "chaotic": 3
+    },
+    "missing_neighbourhood_counts": {
+      "000": 43,
+      "001": 0,
+      "010": 2,
+      "011": 1,
+      "100": 0,
+      "101": 1,
+      "110": 1,
+      "111": 37
+    },
+    "n_class_ambiguous": 2,
+    "class_ambiguous": [
+      {
+        "index": 14436,
+        "rule": 112,
+        "class": "fixed point",
+        "missing": [
+          "000"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 113,
+            "class": "periodic"
+          }
+        ],
+        "probability_class_correct": 0.5
+      },
+      {
+        "index": 29818,
+        "rule": 232,
+        "class": "fixed point",
+        "missing": [
+          "011",
+          "110",
+          "111"
+        ],
+        "alternatives_in_other_class": [
+          {
+            "rule": 32,
+            "class": "null"
+          },
+          {
+            "rule": 160,
+            "class": "null"
+          },
+          {
+            "rule": 96,
+            "class": "null"
+          },
+          {
+            "rule": 224,
+            "class": "null"
+          },
+          {
+            "rule": 40,
+            "class": "null"
+          },
+          {
+            "rule": 168,
+            "class": "null"
+          }
+        ],
+        "probability_class_correct": 0.25
+      }
+    ]
+  }
+}

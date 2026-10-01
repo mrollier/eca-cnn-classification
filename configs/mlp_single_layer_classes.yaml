@@ -1,0 +1,28 @@
+# Fully-connected comparison as the chapter describes it (Sec. 3.2): "a
+# fully-connected ANN with a single 256-node hidden layer ... validation
+# accuracy for Li-Packard classification of just over 95% ... well over a
+# million trainable parameters".
+#
+# That architecture is the one in MLP-verification (64 x 64 -> 256 -> output;
+# its saved run is for rules, 73.96% validation). The ~95% comes from
+# MLP-verification_cropped, a different network (mlp_cropped_classes.yaml).
+# See docs/provenance.md §7.2.
+inherits: base.yaml
+description: MLP, 64 x 64 -> 256 -> 5 (1,050,117 parameters)
+source_notebook: notebooks/archive/MLP-verification.ipynb (cells 7, 10-12)
+chapter_reference: Sec. 3.2, comparison with a fully-connected ANN
+
+model:
+  architecture: mlp
+  output: classes
+  hidden_units: [256]
+
+split:
+  stratify_by: rule
+
+train:
+  epochs: 50
+  learning_rate: 1.0e-4         # MLP-verification cell 11 (the cropped notebook uses 1e-3)
+  early_stopping: {enabled: true, monitor: val_accuracy, patience: 5, min_delta: 1.0e-5,
+                   restore_best_weights: true}
+  evaluate_on: [train, val]

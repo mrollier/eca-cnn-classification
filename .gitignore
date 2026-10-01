@@ -1,0 +1,32 @@
+# Generated output (figures, trained models, run metrics); regenerate with reproduce.py
+output/*
+!output/.gitkeep
+
+# Generated datasets (about 150 MB, bit-packed); regenerate with scripts/make_dataset.py
+data/generated/*
+!data/generated/.gitkeep
+
+# Source material from the authors: the arXiv preprint and the thesis chapter
+input/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+.conda/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+# Normalise line endings of text files in the repository; check out natively.
+* text=auto
+
+# Binary formats: never touch their bytes.
+*.npy binary
+*.npz binary
+*.pdf binary
+*.png binary
+*.keras binary
+
+# Notebooks and shell scripts keep LF everywhere, so diffs stay clean across
+# operating systems and scripts run on Linux.
+*.ipynb text eol=lf
+*.sh text eol=lf

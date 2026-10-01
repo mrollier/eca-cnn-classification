@@ -1,0 +1,77 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the chapter below."
+type: software
+title: "eca-cnn-classification: convolutional neural networks for automated classification of elementary cellular automata"
+abstract: >-
+  Reproducibility package for the book chapter "Convolutional Neural Networks
+  for Automated Cellular Automaton Classification": seeded generation of the
+  64 x 64 ECA datasets, the rule-table scan, the exact hand-weighted CNN, the
+  default and trimmed CNNs with online data augmentation, the figures, and a
+  verification suite. The two bugs of the original notebooks can be reproduced
+  (faithful mode) or fixed (corrected mode).
+authors:
+  - family-names: Rollier
+    given-names: Michiel
+    orcid: "https://orcid.org/0000-0001-8467-734X"
+    affiliation: "BionamiX, Ghent University"
+  - family-names: Daly
+    given-names: Aisling J.
+    affiliation: "BionamiX, Ghent University"
+  - family-names: Baetens
+    given-names: Jan M.
+    orcid: "https://orcid.org/0000-0003-4084-9992"
+    affiliation: "BionamiX, Ghent University"
+license: MIT
+version: "1.0.0"
+date-released: "2026-10-01"
+repository-code: "https://github.com/mrollier/eca-cnn-classification"
+keywords:
+  - cellular automata
+  - elementary cellular automata
+  - Li-Packard classification
+  - convolutional neural networks
+  - data augmentation
+  - reproducibility
+preferred-citation:
+  # A book chapter (BibTeX @incollection); CFF has no dedicated type for it.
+  type: generic
+  title: "Convolutional Neural Networks for Automated Cellular Automaton Classification"
+  authors:
+    - family-names: Rollier
+      given-names: Michiel
+      orcid: "https://orcid.org/0000-0001-8467-734X"
+    - family-names: Daly
+      given-names: Aisling J.
+    - family-names: Baetens
+      given-names: Jan M.
+      orcid: "https://orcid.org/0000-0003-4084-9992"
+  collection-title: "Advances in Cellular Automata"
+  collection-type: book
+  editors:
+    - family-names: Adamatzky
+      given-names: Andrew
+    - family-names: Sirakoulis
+      given-names: Georgios Ch.
+    - family-names: Martínez
+      given-names: Genaro J.
+  series: "Emergence, Complexity and Computation"
+  volume: 53
+  start: 49
+  end: 70
+  year: 2025
+  publisher:
+    name: "Springer, Cham"
+  doi: 10.1007/978-3-031-81097-8_3
+  url: "https://arxiv.org/abs/2409.02740"
+references:
+  - type: thesis
+    title: "The rich landscape of iterated simplicity: cellular automata and network automata"
+    authors:
+      - family-names: Rollier
+        given-names: Michiel
+    thesis-type: "PhD thesis"
+    institution:
+      name: "Ghent University, Department of Data Analysis and Mathematical Modelling"
+    year: 2026
+    isbn: "9789493542495"
+    notes: "Chapter 8, Automated classification of ECAs using CNNs, is a revised version of the chapter."
